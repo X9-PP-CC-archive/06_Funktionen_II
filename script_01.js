@@ -5,7 +5,7 @@
 /*
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
-1. Dateneingabe + -überprüfung :
+1. Dateneingabe + -überprüfung : check! /
 2. Auswahl Rechenart : check!
 3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
@@ -17,6 +17,18 @@
 const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
 const ERROR_STR_GEN = "Irgendetwas ging schief!"
 
+startApp();
+function startApp() {
+	output(calculator(getNum("1"),getNum("2"),getOp()));
+}
+
+function getNum(modStr) {
+	return parseFloat(prompt("Zahl " + modStr));
+}
+
+function getOp() {
+	return prompt("Operator");
+}
 
 
 // module: calculator | tests:
